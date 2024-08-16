@@ -16,7 +16,9 @@ function Forcast(props) {
     }
 
     React.useEffect(()=>{
-        fetchforcast()
+        if (props.city) {
+            fetchforcast();
+        }
     },[props.city])
    
   return (
